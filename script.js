@@ -3,11 +3,11 @@ var letters = "abcdefghijklmnopqrstuvwxyz";
 var uLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*+=";
-
+console.log(letters)
 function generatePassword () {
     var possibleChar = "";
-    var complete = '' ;
-    var passwordLength = prompt("how many characters would you like in the passowrd?");
+    var complete = "" ;
+    var passwordLength = prompt("How many characters would you like in the passowrd?");
 }
 
 var generateBtn = document.querySelector("#generate");
@@ -23,3 +23,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
