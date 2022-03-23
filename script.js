@@ -3,11 +3,11 @@ var letters = "abcdefghijklmnopqrstuvwxyz";
 var uLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*+=";
-console.log(letters)
+
 function generatePassword () {
     var possibleChar = "";
     var complete = "" ;
-    var passwordLength = prompt("How many characters would you like in the passowrd?");
+    var passwordLength = prompt("How many characters would you like in the password?");
 }
 
 var generateBtn = document.querySelector("#generate");
