@@ -1,4 +1,9 @@
 // Assignment Code
+var letters = "abcdefghijklmnopqrstuvwxyz";
+var uLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var symbols = "!@#$%^&*+=";
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
