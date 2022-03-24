@@ -4,50 +4,47 @@ var uLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*+=";
 
-function generatePassword () {
-    var possibleChar = "";
-    var complete = "" ;
-    var passwordLength = prompt("How many characters would you like in the password?");
+function generatePassword() {
+  var possibleChar = "";
+  var complete = "";
+  var passwordLength = prompt("How many characters would you like in the password?");
 
-    if (passwordLength >= 8 === passwordLength >= 128){
-      prompt("Password length must be between 8 and 128 characters!");
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Password length must be between 8 and 128 characters!");
+    return null;
   }
-  
-    var upper = confirm("Would you like upper case?");
-    var lower = confirm("Would you like lower case?");
-    var number = confirm("Would you like numbers?");
-    var symbol = confirm("Would you like symbols?");
 
-    if (upper){
-      possibleChar += uLetters;
-    }
+  var upper = confirm("Would you like upper case?");
+  var lower = confirm("Would you like lower case?");
+  var number = confirm("Would you like numbers?");
+  var symbol = confirm("Would you like symbols?");
 
-    if (lower){
-      possibleChar += letters;
-    }
+  if (upper) {
+    possibleChar += uLetters;
+  }
 
-    if (number){
-      possibleChar += numbers;
-    }
+  if (lower) {
+    possibleChar += letters;
+  }
 
-    if (symbol){
-      possibleChar += symbols;
-    }
+  if (number) {
+    possibleChar += numbers;
+  }
 
-    if (possibleChar < 8) {
-      alert("At least one character type must be selected.");
-      return null;
-    }
+  if (symbol) {
+    possibleChar += symbols;
+  }
 
-    for (var i = 0; i < passwordLength; i++){
-      complete += possibleChar.charAt(Math.floor(Math.random()* possibleChar.length));
-    }
-    return complete;
+  if (possibleChar < 8) {
+    alert("At least one character type must be selected.");
+    return null;
+  }
+
+  for (var i = 0; i < passwordLength; i++) {
+    complete += possibleChar.charAt(Math.floor(Math.random() * possibleChar.length));
+  }
+  return complete;
 }
-
-
-
-
 
 var generateBtn = document.querySelector("#generate");
 
