@@ -35,9 +35,14 @@ function generatePassword () {
     }
 
     if (possibleChar < 8) {
-      alert("At least on character type must be selected.");
-      return;
+      alert("At least one character type must be selected.");
+      return null;
     }
+
+    for (var i = 0; i < passwordLength; i++){
+      complete += possibleChar.charAt(Math.floor(Math.random()* possibleChar.length));
+    }
+    return complete;
 }
 
 
