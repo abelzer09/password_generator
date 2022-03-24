@@ -33,6 +33,11 @@ function generatePassword () {
     if (symbol){
       possibleChar += symbols;
     }
+
+    if (possibleChar < 8) {
+      alert("At least on character type must be selected.");
+      return;
+    }
 }
 
 
