@@ -17,7 +17,23 @@ function generatePassword () {
     var lower = confirm("Would you like lower case?");
     var number = confirm("Would you like numbers?");
     var symbol = confirm("Would you like symbols?");
- }
+
+    if (upper){
+      possibleChar += uLetters;
+    }
+
+    if (lower){
+      possibleChar += letters;
+    }
+
+    if (number){
+      possibleChar += numbers;
+    }
+
+    if (symbol){
+      possibleChar += symbols;
+    }
+}
 
 
 
