@@ -7,17 +7,17 @@ var symbols = "!@#$%^&*+=";
 function generatePassword() {
   var possibleChar = "";
   var complete = "";
-  var passwordLength = prompt("How many characters would you like in the password?");
+  var passwordLength = prompt("How many characters would you like in the password? (min 8 max 128)");
 
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Password length must be between 8 and 128 characters!");
     return null;
   }
 
-  var upper = confirm("Would you like upper case?");
-  var lower = confirm("Would you like lower case?");
+  var upper = confirm("Would you like upper case letters?");
+  var lower = confirm("Would you like lower case letters?");
   var number = confirm("Would you like numbers?");
-  var symbol = confirm("Would you like symbols?");
+  var symbol = confirm("Would you like special characters?");
 
   if (upper) {
     possibleChar += uLetters;
